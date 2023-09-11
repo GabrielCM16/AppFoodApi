@@ -1,13 +1,11 @@
 {
-  "name": "appFoodApi",
+  "name": "App_Food_Api",
   "version": "1.0.0",
   "description": "Aplicativo de Comida",
   "main": "index.js",
-  "repository": "https://github.com/GabrielCM16/AppFoodApi.git",
-  "author": "Gabriel",
+  "author": "Fernando Alves",
   "license": "MIT",
   "scripts": {
-    "build": "tsc",
     "dev": "nodemon src/index.ts"
   },
   "devDependencies": {
@@ -16,6 +14,7 @@
     "@typescript-eslint/parser": "^6.4.1",
     "eslint": "^8.48.0",
     "nodemon": "^3.0.1",
+    "ts-node": "^10.9.1",
     "typescript": "^5.2.2"
   },
   "dependencies": {

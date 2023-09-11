@@ -2,8 +2,7 @@ import express from "express";
 
 const app = express();
 
-const port = 3002;
-
+const port = 3003;
 app.listen(port, () => {
-    console.log("Server isrunning on https://localhost:3001");
+    console.log(`Server is running on http://localhost:${port}`);
 });
