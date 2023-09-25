@@ -1,6 +1,8 @@
-import {model, Schema } from 'mongoose';
+import {model, Schema } from 'mongoose';//importando blibiotecas necessarias
 
-export const Product = model('Product', new Schema({
+//clase Product
+export const Product = model('Product', new Schema({ 
+	//campos requiridos do tipo string e requerido
 	name: {
 		type: String,
 		required: true,
@@ -17,7 +19,7 @@ export const Product = model('Product', new Schema({
 		type: Number,
 		required: true,
 	},
-	ingredients: {
+	ingredients: { //campo ingredients que é um array requerido, com o typo do igrediente, o nome, e o icone
 		required: true,
 		type:[{
 			name: {
@@ -30,7 +32,7 @@ export const Product = model('Product', new Schema({
 			},
 		}],
 	},
-	category: {
+	category: { //campo category que é a referencia de um objeto da classe Category, requerido
 		type: Schema.Types.ObjectId,
 		required: true,
 		ref: 'Category',

@@ -10,16 +10,20 @@ import { listOrders } from './app/useCases/orders/listOrders';
 import { createOrder } from './app/useCases/orders/createOrder';
 import { changeOrderStatus } from './app/useCases/orders/changeOrderStatus';
 import { cancelOrder } from './app/useCases/orders/cancelOrder';
+
+//obj com as rotas locais dos arquivos depois de inicializar o servidor
 export const router = Router();
 
 //configuração do multer
-const upload = multer({
+
+const upload = multer({ //cria um obj para fazer o upload de arquivos na pasta upload
 	storage: multer.diskStorage({
 		destination(req, file, callback){
 			callback(null, path.resolve(__dirname, '..', 'uploads'));
 		},
 		filename(req, file, callback){
 			callback(null, `${Date.now()}-${file.originalname}`);
+			//nome do arquivo igual a data atual + o nome do arquivo 
 		},
 	})
 
