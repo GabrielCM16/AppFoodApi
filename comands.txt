@@ -1,0 +1,19 @@
+entra na pasta
+npm install
+
+npm run dev
+
+se der erro
+npm i ts-node
+
+baixar mongodb
+npm install mongoose
+
+inicializar o server, verificar se tem docker baixado
+docker run --name mongo --volume /save/mongo:/data/dp -p 27017:27017 -d mongo
+
+se der erro
+copia o hash, (codigo bem grande kkk)
+docker rm e cola o hash
+docker run --name mongo --volume /save/mongo:/data/db -p 27017:27017 -d mongo
+docker run dev
